@@ -1,0 +1,66 @@
+html, body {
+width: 100%;
+height: 100%;
+margin: 0;
+background-color: #424242;
+}
+
+
+.spacer {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(252, 251, 251, 0);
+}
+
+
+.vjs-icon-next-item:before {
+    font-size: large;
+    cursor: pointer;
+}
+
+
+.navBarWithSearch {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+.left, .middle, .right {
+    display: flex;
+}
+
+
+.left, .right {
+width: 20%;
+}
+
+.middle {
+    width: 60%;
+    justify-content: center;
+}
+
+
+mat-spinner {
+    position: fixed;
+    z-index: 3;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+

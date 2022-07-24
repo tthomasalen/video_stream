@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.left, .right {
+    width: 100%;
+ height: auto;
+}
+

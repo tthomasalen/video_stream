@@ -1,0 +1,50 @@
+<div class="spacer"></div>
+
+<!-- <div>
+    <a [routerLink]="'/watch/'+vid.id" *ngFor="let vid of videoService.videos">{{vid.title}}</a>
+</div> -->
+    <!-- <mat-spinner #loader></mat-spinner> -->
+
+
+
+<div class="marginMaintainer">
+
+    <div class="sideNaver"></div>
+    <div class="sideNaverOrg">
+
+<button mat-button color="accent" (click) = "sorty(true, true)">A-Z</button>
+<button mat-button color="accent" (click) = "sorty(true, false)">Z-A</button>
+
+    </div>
+
+
+    <div class="content" 
+    
+    infinite-scroll
+    [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollUpDistance]="scrollUpDistance"
+    [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScrollDown()"
+    (scrolledUp)="onUp()">
+
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div class="vidList" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let video of videoService.listOfVideos" [routerLink]="'/watch/'+video.id">
+
+                <mat-card class="mat-elevation-z4" >
+                    <img mat-card-image [src]="envAlias+'image/'+video.id+'.png'" class="imager" alt="Photo of JB">
+                    <mat-card-header>
+                        <mat-card-title> <div style="font-size:small; text-decoration: none; "  dir="auto">{{video.title}}</div><mat-icon *ngIf="video.premium" aria-hidden="false" aria-label="Example home icon">diamond</mat-icon>
+
+                        </mat-card-title>
+                    </mat-card-header>
+                </mat-card>
+
+            </div>
+            </div>
+            </div>
+
+</div>
+
+
+
+

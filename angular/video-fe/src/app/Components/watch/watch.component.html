@@ -1,0 +1,71 @@
+
+<div class="spacer"></div>
+<div class="watchContainer" #watcher>
+
+<div class="videoContainer">
+
+    <video
+    id="my-video"
+    class="video-js vjs-theme-forest"
+    controls
+    preload="auto"
+    height="100%"
+    weight="100%"
+    data-setup=""
+    #videoTag
+    autoplay
+  >
+  </video>
+
+</div>
+
+<div class="videoDetails">
+  <!-- <div class="title"> -->
+      <mat-card class="title"> <div class="titlePart">{{state.reel.title}}</div> <div class="buttonPart">
+      <button (click)="videoService.playlist(state.reel.id)" *ngIf="state.like" mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button (click)="videoService.playlist(state.reel.id)" *ngIf="!state.like"  mat-icon-button aria-label="Example icon-button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+  <!-- </div> -->
+
+
+  <!-- <div class="description"> -->
+    <mat-card class="description">{{state.reel.description}}</mat-card>
+  <!-- </div> -->
+
+</div>
+
+<div class="videoList">
+
+  <div class="content" >
+
+      <div fxLayout="column " fxLayoutGap="16px grid">
+        <div class="vidList" *ngFor="let video of videoService.videos" (click)="changeVideo(video.id)">
+
+              <mat-card class="mat-elevation-z4" >
+                  <img mat-card-image [src]="envAlias+'image/'+video.id+'.png'" class="imager" alt="Photo of JB">
+                  <mat-card-header>
+                      <mat-card-title> 
+                        <a style="font-size:small; text-decoration: none; "  dir="auto">{{video.title}}</a><mat-icon *ngIf="video.premium" aria-hidden="false" aria-label="Example home icon">diamond</mat-icon>
+                      </mat-card-title>
+                  </mat-card-header>
+              </mat-card>
+
+          </div>
+          </div>
+          </div>
+
+</div>
+
+
+</div>
+
+
+<div class="watchContainer" #blanker>
+
+<p>Not Available</p>
+</div>

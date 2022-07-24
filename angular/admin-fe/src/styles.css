@@ -1,0 +1,13 @@
+html, body {
+width: 100%;
+height: 100%;
+margin: 0;
+background-color: #424242;
+}
+
+
+.spacer {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(252, 251, 251, 0);
+}

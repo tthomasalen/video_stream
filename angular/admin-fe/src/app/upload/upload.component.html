@@ -1,0 +1,62 @@
+
+
+
+<div class="outer">
+
+<div *ngIf="currentFile" class="progress">
+    <div
+      class="progress-bar progress-bar-info progress-bar-striped"
+      role="progressbar"
+      attr.aria-valuenow="{{ progress }}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      [ngStyle]="{ width: progress + '%' }"
+    >
+      {{ progress }}%
+    </div>
+  </div>
+  
+
+ <label class="form-label" for="form2Example1"> </label>
+
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form2Example1" class="form-control" 
+      formControlName="title"
+      required
+      class="form-control" />
+      <label class="form-label" for="form2Example1">Title</label>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form2Example2" class="form-control"
+      formControlName="description"
+      required
+      class="form-control" />
+      <label class="form-label" for="form2Example2">Description</label>
+    </div>
+  
+    <div class="form-outline mb-4">
+        <input
+        type="checkbox"
+        formControlName="acceptTerms"
+        class="form-check-input"
+      />
+        <label class="form-label" for="form2Example2">Premium</label>
+      </div>
+
+      <div class="form-outline mb-4">
+        <label class="btn btn-default">
+            <input type="file" formControlName="filer" accept=".mp4"  (change)="selectFile($event)" />
+          </label>
+      </div>
+  
+    <!-- Submit button -->
+    <button type="submit" [disabled]="!selectedFiles"  class="btn btn-primary btn-block mb-4">Submit</button>
+  
+  </form>
+
+  </div>

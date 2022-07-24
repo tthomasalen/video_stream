@@ -1,0 +1,20 @@
+<div class="spacer"></div>
+
+
+
+<div class="stat">
+
+    <mat-card class="example-card">
+      <mat-icon *ngIf="!state.login.premium">grass</mat-icon>
+      <mat-icon *ngIf="state.login.premium">diamond</mat-icon>
+        <mat-card-title>{{state.login.name}}</mat-card-title>
+        <mat-card-subtitle>You are a {{state.login.premium? 'Premium User' : 'Non-Premium User'}} now</mat-card-subtitle>
+        <mat-card-content>
+          <p>email: {{state.login.email}}</p>
+          <p>Your session expires on {{longText}}</p>
+        </mat-card-content>
+        <H1>Send me patreon to: <b>0x0Da81bDb6967480224535cb3782DB69b8918d26d</b> </H1>
+        <H1>My e-mail id: <b>tthomasalen@gmail.com</b> </H1>
+      </mat-card>
+
+</div>

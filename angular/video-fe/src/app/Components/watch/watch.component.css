@@ -1,0 +1,142 @@
+.watchContainer {
+display: flex;
+width: 100%;
+height: calc(100% - 70px);
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+
+.videoContainer {
+    width: 75%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+.videoDetails {
+    width: 75%;
+    height: 25%;
+    /* background-color: brown; */
+    background-color: #424242;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.videoList {
+    background-color: #424242;
+width: 25%;
+height: 100%;
+}
+
+
+.video-js {
+    width: 94%;
+    height: 96%;
+}
+
+
+.title, .description {
+width: 94%;
+}
+
+.title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.titlePart {
+    width: 70%;;
+}
+
+.buttonPart {
+    width: 30%;
+}
+
+.title {
+    background-color: #2d2323;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.description {
+    height: 70%;
+    background-color: #615c5c;
+}
+
+
+mat-icon {
+    cursor: pointer;
+}
+
+.content {
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content div {
+    width: 90%;
+    height: 100%;
+    align-items: center;
+}
+
+
+/* .videoDetails, .videoContainer {
+    margin: 0 20px 0 0 ;
+} */
+
+.imager {
+    height: 140px;
+}
+
+.mat-elevation-z4 {
+    padding: 16px 16px 0 16px;
+}
+
+.mat-card-title {
+    margin-top: -7px;
+    margin-bottom: 7px;
+}
+
+.length {
+    height: 100%;
+}
+
+.vidList {
+    cursor: pointer;
+}
+
+mat-card-title a {
+    display: flex;
+    align-items: center;
+}
+
+mat-card-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+mat-card-header {
+    display: flex;
+    width: 100%;
+}

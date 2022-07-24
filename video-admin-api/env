@@ -1,0 +1,15 @@
+# please change envs accordingly.
+
+export PORT=":1323"
+export LOG_LOCATION="/tmp/log.txt"
+export ACCESS_LOG_LOCATION="/tmp/access.txt"
+export DB_USER="connect_user"
+export DB_PASSWORD="password"
+export DB_HOST="localhost"
+export DB_NAME="streamer"
+export DB_PORT=3306
+export JWT_SECRET="secret"
+export VIDEOS_FOLDER="/home/alen/video-project/video/"
+export FE_CALLBACK_SERVER="http://localhost:5000"
+export ALBUMART_FOLDER="/home/alen/video-project/album/"
+export FFMPEG_BINARY="/home/alen/video-project/binaries/ffmpeg"

@@ -1,0 +1,63 @@
+<div class="navBarWithSearch" >
+
+    <mat-toolbar color="primary">
+  
+      <div class="left">
+        <span [routerLink]="'/home'">Andromeda</span>
+        <span class="example-spacer"></span>
+      </div>
+  
+      <div class="middle">
+        <form class="example-form" #header>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput
+                   aria-label="State"
+                   [matAutocomplete]="auto"
+                   [formControl]="searcher">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let state of videoService.filteredSongs" (click)="changeVideo(state.id)">
+                <span>{{state.title}} </span>
+                <img class="example-option-img" aria-hidden [src]="envImporter+'image/'+state.id+'.png'" height="25">
+                <small>   </small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
+  
+  <div class="right">
+  
+    <button mat-icon-button [matMenuTriggerFor]="menu" [matBadge]="stater.login.name.substring(0,1).toUpperCase()" matBadgeSize="medium" matBadgePosition="before" [matBadgeHidden]="stater.login.token == ''" matBadgeColor="accent" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngIf="stater.login.token == ''" [routerLink]="'/login'">
+        <mat-icon>notifications_off</mat-icon>
+        <span>Login</span>
+      </button>
+      <button mat-menu-item *ngIf="stater.login.token == ''" [routerLink]="'/register'">
+        <mat-icon>notifications_off</mat-icon>
+        <span>Register</span>
+      </button>
+      <button mat-menu-item *ngIf="stater.login.token != ''" [routerLink]="'/home'">
+        <mat-icon>dialpad</mat-icon>
+        <span>home</span>
+      </button>
+      <button mat-menu-item *ngIf="stater.login.token != ''" [routerLink]="'/playlist'">
+        <mat-icon>voicemail</mat-icon>
+        <span>playlist</span>
+      </button>
+      <button mat-menu-item *ngIf="stater.login.token != ''" [routerLink]="'/status'">
+        <mat-icon>voicemail</mat-icon>
+        <span>status</span>
+      </button>
+      <button mat-menu-item *ngIf="stater.login.token != ''" (click)="logout()">
+        <mat-icon>notifications_off</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+  
+    </mat-toolbar>
+  </div>

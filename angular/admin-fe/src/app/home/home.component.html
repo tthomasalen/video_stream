@@ -1,0 +1,32 @@
+
+<div class="spacer"></div>
+
+
+<div class="container">
+    <div class="left">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">B/U</th>
+                <th scope="col">premium</th>
+                <th scope="col">Delete</th>
+                <th scope="col">email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let el of user; let i = index;">
+                <th scope="row">{{i+1}}</th>
+                <td><button *ngIf="!blockCheck(el.Email)" (click)="block(el.Email)" type="button" class="btn btn-warning">Block</button>
+                    <button *ngIf="blockCheck(el.Email)" (click)="unblock(el.Email)" type="button" class="btn btn-success">Unblock</button></td>
+
+                    <td><button *ngIf="!el.Premium" (click)="premium(el.Email)" type="button" class="btn btn-warning">No</button>
+                      <button *ngIf="el.Premium" (click)="premium(el.Email)" type="button" class="btn btn-success">Yes</button></td>
+                <td><button (click)="remove(el.Email)" type="button" class="btn btn-danger">Delete</button></td>
+                <td>{{el.Email}}</td>
+              </tr>
+            </tbody>
+          </table>
+        
+    </div>
+</div>
