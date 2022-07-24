@@ -12,8 +12,7 @@ import (
 func MySQLInit() {
 	//Initilaising Db
 	sqlConnectionStringFormat := "%s:%s@tcp(%s:%s)/%s?parseTime=true"
-	// sqlConnectionString := fmt.Sprintf(sqlConnectionStringFormat, "milen", "password",
-	// 	"localhost", "3306", "meetups")
+
 
 	sqlConnectionString := fmt.Sprintf(sqlConnectionStringFormat, os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"),
 		os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), os.Getenv("DB_NAME"))
